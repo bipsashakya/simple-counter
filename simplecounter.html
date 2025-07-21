@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Counter</title>
+    <link rel="stylesheet" href="counter.css">
+</head>
+
+<body>
+
+
+        <div class="counter-container">
+            <h1> Simple Counter </h1>
+            <div id="count"> 5 </div>
+            <div class="button">
+                <button class="decrease" onclick="changeCount()"> -</button>
+                <button class "reset" onclick="resetCount()"> Reset</button>
+                <button class="increase" onclick="changeCounte()"> + </button>
+            </div>
+            <script>
+                function changeCount() {
+                    let countElem = document.getElementById("count")
+                    let value = countElem.textContent
+                    value = value - 1
+                    console.log(value)
+                    countElem.innerText = value
+                }
+                function resetCount() {
+                    let countElem = document.getElementById("count")
+                    countElem.innerText = 0
+
+                }
+                function changeCounte() {
+                    let countElem = document.getElementById("count")
+                    let value = countElem.textContent
+                    value = parseInt(value) + 1
+                    console.log(value)
+                    countElem.innerText = value
+                }
+            </script>
+    </body>
+
+</html> 
